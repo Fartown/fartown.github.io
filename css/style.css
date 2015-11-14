@@ -1366,7 +1366,7 @@ span.menu {
 	height: 49px;
 	background-size: 149px;
 }
-.banner-bottom ul li a span.t{
+/*.banner-bottom ul li a span.t{
 	background-position:-50px 0px;
 }
 .banner-bottom ul li a span.g{
@@ -1380,7 +1380,7 @@ span.menu {
 }
 .banner-bottom ul li a span.g:hover{
 	background-position:-100px -49px;
-}
+}*/
 .banner-bottom ul li {
 	margin: 0 11px;
 }
