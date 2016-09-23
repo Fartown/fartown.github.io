@@ -1,7 +1,8 @@
 function view() {
     return {
         w: document.documentElement.clientWidth,
-        h: document.documentElement.clientHeight
+        h: document.documentElement.clientHeight,
+        h1:window.screen.availHeight
     };
 }
 function id(obj) {
