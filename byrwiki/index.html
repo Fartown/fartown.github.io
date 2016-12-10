@@ -66,6 +66,8 @@ width: 100%;
   
  <a  href="#"   class="yb " onclick="AddFavorite(window.location,document.title)"  >收藏本站</a>
     <a href="#"    onclick="AddFavorite(window.location,document.title)"  class="yb">设为首页</a>
+     <a onclick="setHomepage()" title="设为首页" href="javascript:void(0);">设为首页</a>
+      <a onclick="setHomepage()" title="设为首页" href="javascript:void(0);">设为首页</a>
        
   </div>
  </ul>
@@ -650,6 +652,44 @@ catch (e) {
      }
   }
 }
+        jQuery.fn.addFavorite = function(l, h) {
+            return this.click(function() {
+                var t = jQuery(this);
+                if(jQuery.browser.msie) {
+                    window.external.addFavorite(h, l);
+                } else if (jQuery.browser.mozilla || jQuery.browser.opera) {
+                    t.attr("rel", "sidebar");
+                    t.attr("title", l);
+                    t.attr("href", h);
+                } else {
+                    alert("请使用Ctrl+D将本页加入收藏夹！");
+                }
+            });
+        };
+        $(function(){
+            $('#fav').addFavorite(document.title,location.href);
+        });
+           function setHomepage() {
+            if (document.all) {
+                /*IE*/
+                document.body.style.behavior = 'url(#default#homepage)';
+                document.body.setHomePage(window.location.href);
+            } else if (window.sidebar) {
+                /*FF*/
+                if (window.netscape) {
+                    try {
+                        netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+                    } catch (e) {
+                        alert("该操作被浏览器拒绝，如果想启用该功能,请在地址栏内输入 about:config,然后将项 signed.applets.codebase_principal_support值该为true");
+                    }
+                }
+                var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+                prefs.setCharPref('browser.startup.homepage', window.location.href);
+            } else {
+                /*chrome或者其他*/
+                alert("您的浏览器不支持自动自动设置首页,请使用浏览器菜单手动设置!");
+            }
+        }
   </script>
 
 
