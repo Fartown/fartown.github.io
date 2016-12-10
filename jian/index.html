@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>简测</title>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="">
+    <meta name="apple-mobile-web-app-status-bar-style" content="" />
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+    <div class="title">
+        <p>
+            <返回</p>
+                <p>苏州供电心理测试</p>
+                <p>...</p>
+    </div>
+    <div class="logo">
+        <img src="image/inc-logo.png" alt="">
+        <div class="content">
+            <p class="inc">苏州供电</p>
+            <p class="title">员工心理测试</p>
+        </div>
+    </div>
+    <p class="intro"><span>——苏州供电系统职业测试</span><br><span> （测试介绍与说明）</span></p>
+    <div class="enter"><input type="button" value="进入测试" id="enter"></div>
+    <p class="copyright">Powered by 简测</p>
+    <script>
+    var enterButton = document.getElementById('enter');
+      enterButton.onclick = function () {
+         changColor(enterButton,'active'); 
+    }  
+    </script>
+</body>
+</html>
