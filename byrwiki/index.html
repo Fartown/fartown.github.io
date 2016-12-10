@@ -64,7 +64,7 @@ width: 100%;
    <!-- <a href="http://byr.wiki" id="zb" style="font-size: 19px;">北邮人导航</a>-->
     <a class="LOGO1" href="http://byr.wiki"><img id="zb" src="./images/logo7.png"  alt="北邮人导航"></a>
   
-    <a href="http://byr.wiki/liuyan.html" target="_blank" class="yb "  >关于页面</a>
+ <a  href="#"   class="yb " onclick="AddFavorite(window.location,document.title)"  >收藏本站</a>
     <a href="#"    onclick="AddFavorite(window.location,document.title)"  class="yb">设为首页</a>
        
   </div>
@@ -637,7 +637,19 @@ function SetHome(obj,vrl){
                  }
         }
 }
-
+function AddFavorite(title, url) {
+  try {
+      window.external.addFavorite(url, title);
+  }
+catch (e) {
+     try {
+       window.sidebar.addPanel(title, url, "");
+    }
+     catch (e) {
+         alert("抱歉，您所使用的浏览器无法完成此操作。\n\n加入收藏失败，请使用Ctrl+D进行添加");
+     }
+  }
+}
   </script>
 
 
