@@ -10,16 +10,12 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/common.css">
+        <script src="js/jquery.js"></script>
     <script src="js/index.js"></script>
+
 </head>
 
 <body>
-    <div class="title">
-        <p>
-            <返回</p>
-                <p>压力测试</p>
-                <p>...</p>
-    </div>
     <div class="process">
         <img src="image/pro-bg.png" alt="" class="bg">
         <img src="image/pro.png" alt="" class="pro">
@@ -30,22 +26,29 @@
             <input type="radio" name="11" value="option1">
             <label for="option1" class="">A 总是</label>
         </div>
-                <div class="test2-select">
-            <input type="radio" name="11" value="option1">
-            <label for="option1" class="">A 总是</label>
-        </div>        <div class="test2-select">
-            <input type="radio" name="11" value="option1">
-            <label for="option1" class="">A 总是</label>
-        </div>        <div class="test2-select">
+        <div class="test2-select">
             <input type="radio" name="11" value="option1">
             <label for="option1" class="">A 总是</label>
         </div>
-                <div class="test2-select">
+        <div class="test2-select">
+            <input type="radio" name="11" value="option1">
+            <label for="option1" class="">A 总是</label>
+        </div>
+        <div class="test2-select">
+            <input type="radio" name="11" value="option1">
+            <label for="option1" class="">A 总是</label>
+        </div>
+        <div class="test2-select">
             <input type="radio" name="11" value="option1">
             <label for="option1" class="">A 总是</label>
         </div>
     </form>
     <p class="previous">上一题</p>
 </body>
-
+<script>
+$($('.test2-select').click(function(){
+    // $(this).
+    window.location.href = 'press-result.html';
+}));
+</script>
 </html>

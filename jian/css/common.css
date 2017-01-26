@@ -13,8 +13,7 @@ body{
 	background-position:center;
 	color: white;
     background-attachment:fixed;
-background-color:#141833;
-
+    background-color:#141833;
 }
 p.copyright{
 	left: 50%;
@@ -24,9 +23,8 @@ p.copyright{
 	bottom: 15px;
 }
 
-.title{
+/*.title{
 	position: relative;
-	padding-top: 5px;
 }
 .title p:nth-of-type(1){
   position: absolute;
@@ -48,7 +46,7 @@ top: 30%;
 transform: translateY(-50%);
  margin: 0;
  font-size: .35rem;
-}
+}*/
 
 input{
 	outline: 0;

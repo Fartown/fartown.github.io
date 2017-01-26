@@ -10,16 +10,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/common.css">
+    <script src="js/jquery.js"></script>
     <script src="js/index.js"></script>
 </head>
 
 <body>
-    <div class="title">
-        <p>
-            <返回</p>
-                <p>压力测试</p>
-                <p>...</p>
-    </div>
      <div class="info-title"><p>抑郁测试结果分析</p><img src="image/rect-press.png" alt=""></div>
      <p class="appreciate">--- 感谢您参与本次测试 ---</p>
 <div class="result">
@@ -29,5 +24,11 @@
     <div><input type="button" value="进入下一测试" id="submit" type="submit"></div>
     <p class="copyright">Powered by 简测</p>
 </body>
-
+<script>
+    var subButton = document.getElementById('submit');
+    subButton.onclick =function () {
+         changColor(subButton,'active');  
+         window.location.href='end.html';
+    };
+</script>
 </html>

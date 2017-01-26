@@ -14,14 +14,7 @@
 </head>
 
 <body>
-    <div class="title">
-        <p>
-            <返回</p>
-                <p>苏州供电心理测试</p>
-                <p>...</p>
-    </div>
      <div class="info-title"><p>感谢您的测评</p><img src="image/rect-press.png" alt=""></div>
-
 <div class="result">
   <p class="result-detail inc-message">平时应该多注意</p>
 </div>
@@ -29,5 +22,11 @@
     <div><input type="button" value="继续测试" id="submit" type="submit"></div>
     <p class="copyright">Powered by 简测</p>
 </body>
-
+<script>
+    var subButton = document.getElementById('submit');
+    subButton.onclick =function () {
+         changColor(subButton,'active');  
+         window.location.href='end.html';
+    };
+</script>
 </html>
