@@ -6,4 +6,3 @@ function changColor (ele,clas) {
 	}
 
 
-
