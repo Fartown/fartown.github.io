@@ -24,7 +24,7 @@
 
 p.inc {
     font-family: 'zhonghei';
-    font-size: .33rem;
+    font-size: 40px;
     text-align: center;
 }
 
@@ -32,13 +32,13 @@ p.title {
     margin-top: .2rem;
     font-family: 'xianhei';
     text-align: center;
-    font-size: 0.2rem;
+    font-size: 24px;
 }
 
 .inc_intro {
     font-family: 'xianhei';
     margin-top: .795rem;
-    font-size: .25rem;
+    font-size: 30px;
     padding-left: 3.2%;
     line-height: .38rem;
 }
@@ -57,7 +57,7 @@ p.title {
     width: 100%;
     border: 1px solid white;
     background-color: #aa4343;
-    font-size: .23rem;
+    font-size: 28px;
     padding: 10px 8px;
     color: white;
     border-radius: 10px;
