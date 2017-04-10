@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>dom empty memory leaks</title>
+    <script src="http://cdn.staticfile.org/zepto/1.0rc1/zepto.min.js"></script>
+</head>
+
+<body>
+    <button onclick="addDom()">add dom</button>
+    <button onclick="empty()">empty dom</button>
+    <div id="container">
+    </div>
+</body>
+<script>
+// var num = parseInt(read_line());
+// var record = [];
+// var list = [];
+// var count = 0;
+// for (var i = 0; i < num; i++) {
+//     var line = read_line().split(" ");
+//     list.push(line[0]);
+//     if (list.indexOf(line[0]) == -1) {
+//         if (line[1] == 1) {
+//             if (line[2] == 1) {
+//                 count += 30;
+//             } else {
+//                 count += 10;
+//             }
+//         } else {
+//             count += 0;
+//         }
+//     } else {
+//         if (line[1] == 1) {
+//             if (line[2] == 1) {
+//                 count += 30;
+//             } else {
+//                 count += 5;
+//             }
+//         }
+//     }
+// }
+// var num = 5;
+// var record = [];
+// var list = [];
+// var count = 0;
+// var inl= ["12 1 0","15 0 0","12 1 1","12 1 0","16 1 0"];
+// for (var i = 0; i < num; i++) {
+//     var line = inl[i].split(" ");
+//     if (list.indexOf(line[0]) == -1) {
+//         if (line[1] == 1) {
+//             if (line[2] == 1) {
+//                 count += 30;
+//             } else {
+//                 count += 10;
+//             }
+//         } else {
+//             count += 0;
+//         }
+//     } else {
+//         if (line[1] == 1) {
+//             if (line[2] == 1) {
+//                 count += 30;
+//             } else {
+//                 count += 5;
+//             }
+//         }
+//     }
+//     list.push(line[0]);
+// }
+// console.log(count)
+Array.prototype.average = function () {
+  var sum = 0;
+   for (var i = 0; i < this.length; i++) {
+     sum += parseInt(this[i]);
+   }
+   return sum/(this.length);
+}
+var arr = [[4,4,5,3,4,0],[3,3,3,3,3,1],[5,5,5,5,5,2]];
+arr.sort(function (a,b) {
+  return b[0]-a[0];
+}).sort(function (a,b) {
+   return b[6]-a[6];
+}).sort(function (a,b) {
+   return  a[5]-b[5]
+});
+var result = []
+for (var i = 0; i < num; i++) {
+  print(arr[i][5])
+}
+print(arr.join(" "))
+</script>
+
+</html>
