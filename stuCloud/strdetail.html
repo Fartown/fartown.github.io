@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="">
+    <meta name="apple-mobile-web-app-status-bar-style" content="" />
+    <title>学习资料</title>
+    <script src="js/zepto.js"></script>
+    <style>
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+        font-size: 16px;
+        background-color: #f4f4f4;
+        border: 1px solid transparent;
+        letter-spacing: 1.5px;
+    }
+    
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    .common {
+        width: 98%;
+        border-radius: 3px;
+        background-color: #fff;
+        margin: 5px auto;
+        padding: 5px;
+    }
+    
+    .common p {
+        font-size: .7em;
+        padding: 5px;
+    }
+    
+    .title {
+        text-align: center;
+    }
+    
+    p.color {
+        color: #51b0cf;
+        font-size: 1em;
+    }
+    
+    p.subtitle {
+        font-size: .8em;
+    }
+    
+    .praise {
+        position: absolute;
+        top: 2px;
+        right: 10px;
+        font-size: .8em;
+    }
+    
+    .communication {
+        position: relative;
+    }
+    
+    .time {
+        font-size: .8em;
+        display: inline-block;
+        text-align: center;
+        width: 80px;
+        border-radius: 2px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: black;
+    }
+    
+    .avatar {
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+        border-radius: 100%;
+        float: left;
+    }
+    
+    .avatar img {
+        width: 40px;
+    }
+    
+    .right {
+        margin-left: 50px;
+    }
+    
+    .comlist {
+        position: relative;
+        border-bottom: .5px solid #f4f4f4;
+    }
+    
+    .reply {
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
+        font-size: .8em;
+        color: #51b0cf;
+    }
+    
+    .profile {
+        height: 60px;
+        background-color: #fff;
+        padding-left: 10px;
+    }
+    
+    .headimg {
+        float: left;
+        height: 40px;
+        width: 40px;
+        border-radius: 100%;
+        overflow: hidden;
+        margin-top: 10px;
+    }
+    
+    .headimg img {
+        height: 40px;
+        width: 40px;
+    }
+    
+    .name {
+        margin-left: 70px;
+        font-size: 13px;
+        position: relative;
+        height: 60px;
+    }
+    
+    .name p:nth-of-type(1) {
+        height: 30px;
+        line-height: 30px;
+    }
+    
+    .name p:nth-of-type(2) {
+        height: 30px;
+        line-height: 30px;
+        font-size: .8em;
+    }
+    
+    .sustudent {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
+    
+    .content {
+        padding: 10px;
+        font-size: 15px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="title common">
+        <h3>线性代数</h3>
+        <p class="color subtitle">华小科整理 &nbsp;2022.2.3更新 &nbsp;共享300次</p>
+    </div>
+    <div class="profile">
+        <div class="headimg">
+            <img src="images/avatar.jpg" height="386" width="386" alt="">
+        </div>
+        <div class="name">
+            <p>我就是啦啦啦</p>
+            <p>我是一个好人 <span class="sustudent">学神</span></p>
+        </div>
+    </div>
+    <p class="content">前面大家都见证了如何使用rem来完成H5适配。那么文本又将如何处理适配。是不是也通过rem来做自动适配。 显然，我们在iPhone3G和iPhone4的Retina屏下面，希望看到的文本字号是相同的。也就是说，我们不希望文本在Retina屏幕下变小，另外，我们希望在大屏手机上看到更多文本，以及，现在绝大多数的字体文件都自带一些点阵尺寸，通常是16px和24px，所以我们不希望出
+    </p>
+    <div class="communication common">
+        <p class="color">同学交流区 <span class="time">按时间排序</span></p>
+        <div class="avatar">
+            <img src="images/avatar.jpg" alt="">
+        </div>
+        <div class="right">
+            <div class="comlist">
+                <p class="nickname">丁丁历险记 <span class="praise">26</span></p>
+                <p class="chat">什么乱七八糟</p>
+                <p class="date">12-09&nbsp;15:24</p>
+                <p class="reply">回复</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

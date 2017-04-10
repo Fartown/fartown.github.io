@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=640,user-scalable=no" />
+    <link href="css/index.css" rel="stylesheet" />
+    <script src="js/base.js"></script>
+    <title>取经</title>
+</head>
+
+<body>
+    <script>
+    document.body.style.height = view().h + "px";
+    document.body.style.weight = view().w + "px";
+    </script>
+    <div class="main" style="background-color:#eeeeee;">
+        <div class="info">约见行家</div>
+        <div class="process">
+            <div class="first">
+                <p>预约</p>
+                <p>行家确认</p>
+                <p>完成</p>
+                <img src="image/images/约见流程.png" alt="">
+            </div>
+            <div class="description"> 
+                <form action="">
+                    <textarea cols="58" rows="15"    placeholder="个人情况描述"></textarea>
+                    <textarea rows="2" cols="58" placeholder="联系方式"></textarea>
+                    <p>注意:见面的时间和地点有行家和您共同商定</p>
+                    <input type="submit" value="完成">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="tab">
+        <ul>
+            <li><a href="">发现</a></li>
+            <li><a href="">消息管理</a></li>
+            <li><a href="">发布技能</a></li>
+            <li><a href="">我的</a></li>
+        </ul>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

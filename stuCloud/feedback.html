@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="">
+    <meta name="apple-mobile-web-app-status-bar-style" content="" />
+    <title>反馈</title>
+    <style>
+    body {
+        margin: 0;
+        background-color: #f4f4f4;
+        padding-bottom: 20px;
+    }
+    
+    p {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .feedbackbox {
+        padding-top: 10%;
+        width: 90%;
+        height: 200px;
+        margin: 0 auto;
+        position: relative;
+    }
+    
+    textarea {
+        width: 100%;
+        height: 100%;
+        border-width: 0;
+        outline: none;
+    }
+    
+    input[type='file'] {
+        display: none;
+    }
+    
+    label {
+        position: absolute;
+        bottom: 0px;
+        left: 5px;
+    }
+    
+    label img {
+        height: 50px;
+    }
+    
+    #submit {
+        width: 40%;
+        margin: 30px 0 0 30%;
+        background-color: #51b0cf;
+        color: white;
+        height: 2rem;
+        line-height: 2rem;
+        border-width: 0;
+        letter-spacing: 1px;
+        border-radius: 5px;
+    }
+    
+    .history {
+        width: 90%;
+        text-align: center;
+        border-bottom: 1px solid #51b0cf;
+        padding-bottom: 5px;
+        margin: 30px auto 0;
+        color: #51b0cf;
+        font-size: .8rem;
+    }
+    
+    .fblist {
+        width: 90%;
+        margin: 15px auto 0;
+    }
+    
+    .date {
+        position: relative;
+        margin-bottom: 5px;
+    }
+    
+    .state {
+        position: absolute;
+        top: 0;
+        right: 8px;
+    }
+    
+    .green {
+        color: #51b0cf;
+    }
+    
+    .content {
+        background-color: #fff;
+        padding: 5px;
+        font-size: .9rem;
+    }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <div class="feedbackbox">
+            <textarea name="feedback">
+            </textarea>
+            <input type="file" id="file">
+            <label for="file"><img src="images/feedfile.png" alt=""></label>
+        </div>
+        <input type="submit" id="submit" value="提交反馈">
+        <p class="history">
+            历史反馈
+        </p>
+        <div class="fblist">
+            <p class="date">2016.11.11&nbsp;20:39&nbsp; <span class="type">直接反馈</span> <span class="state">已受理</span></p>
+            <div class="content">
+                <p><span class="green">反馈内容:</span>哈哈哈哈我</p>
+                <p><span class="green">回复内容:</span></p>
+            </div>
+        </div>
+          <div class="fblist">
+            <p class="date">2016.11.11&nbsp;20:39&nbsp; <span class="type">直接反馈</span> <span class="state">已受理</span></p>
+            <div class="content">
+                <p><span class="green">反馈内容:</span>哈哈哈哈我</p>
+                <p><span class="green">回复内容:</span></p>
+            </div>
+        </div>  <div class="fblist">
+            <p class="date">2016.11.11&nbsp;20:39&nbsp; <span class="type">直接反馈</span> <span class="state">已受理</span></p>
+            <div class="content">
+                <p><span class="green">反馈内容:</span>哈哈哈哈我</p>
+                <p><span class="green">回复内容:</span></p>
+            </div>
+        </div>  <div class="fblist">
+            <p class="date">2016.11.11&nbsp;20:39&nbsp; <span class="type">直接反馈</span> <span class="state">已受理</span></p>
+            <div class="content">
+                <p><span class="green">反馈内容:</span>哈哈哈哈我</p>
+                <p><span class="green">回复内容:</span></p>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
