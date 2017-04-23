@@ -180,10 +180,100 @@
             };
         }
     };
+    //文本绘制
+    function drawText(ctx, pos, text) {
+        this.ctx = ctx;
+        this.text = text;
+        this.position = pos;
+        this.drawtext();
+    };
+    drawText.prototype = {
+        drawtext: function() {
+            this.ctx.strokeText(this.text, this.position.x, this.position.y);
+        },
+        update: function() {
+            this.drawtext();
+        }
+    };
+    drawRect = function(ctx, start, end) {
+        this.ctx = ctx;
+        this.start = start;
+        this.end = end;
+        this.rect();
+    };
+    drawRect.prototype = {
+        rect: function() {
+            this.ctx.strokeRect(this.start.x, this.start.y, this.end.x - this.start.x, this.end.y - this.start.y);
+        },
+        update: function() {
+            this.rect();
+        }
+    };
+    drawEllipse = function(ctx, center, a) {
+        this.ctx = ctx;
+        this.center = center;
+        this.a = a;
+        this.b = 2 * a / 5;
+        this.ellipse();
+    };
+    drawEllipse.prototype = {
+        ellipse: function() {
+            var step = (this.a > this.b) ? 1 / this.a : 1 / this.b;
+            this.ctx.beginPath();
+            this.ctx.moveTo(this.center.x + this.a, this.center.y);
+            for (var i = 0; i < 2 * Math.PI; i += step) {
+                this.ctx.lineTo(this.center.x + this.a * Math.cos(i), this.center.y + this.b * Math.sin(i));
+            }
+            this.ctx.closePath();
+            this.ctx.stroke();
+        },
+        update: function() {
+            this.ellipse();
+        }
+    };
+    drawBall = function(ctx, center, radius) {
+        this.ctx = ctx;
+        this.x = center.x;
+        this.y = center.y;
+        this.radius = radius || 11;
+        this.ring = '3';
+        this.strokeStyle = 'black';
+        this.ball();
+    };
+    drawBall.prototype = {
+        ball: function() {
+            this.ctx.save()
+            // ball.src = 'image/tool/ball-tool-icon.svg';
+            // ball.crossOrigin = "Anonymous";
+            // ball.onload = function() {
+            //     // ball.style.position = 'absolute';
+            //     // ball.style.top = _this.center.y;
+            //     // ball.style.left = _this.center.x;
+            //     // ball.style.display = 'block';
+            //     _this.ctx.drawImage(ball, _this.center.x, _this.center.y);
+            // };
+            this.ctx.beginPath();
+            this.ctx.strokeStyle = this.strokeStyle;
+            this.ctx.lineWidth = 1;
+            this.ctx.moveTo(this.x + this.radius + 0.5, this.y);
+            this.ctx.arc(this.x, this.y, this.radius + 0.5, 0, Math.PI * 2, true);
+            this.ctx.moveTo(this.x + this.radius + this.ring + 0.5, this.y);
+            this.ctx.arc(this.x, this.y, this.radius + this.ring + 0.5, 0, Math.PI * 2, false);
+            this.ctx.closePath();
+            this.ctx.stroke();
+            this.ctx.restore();
+        },
+        update: function() {
+            this.ball();
+        }
+    }
     window.objStack = objStack;
     window.SoccerPlayer = SoccerPlayer;
     window.statusStack = statusStack;
     window.drawLine = drawLine;
+    window.drawText = drawText;
+    window.drawEllipse = drawEllipse;
+    window.drawBall = drawBall;
 })(window);
 
 //获取图片宽高
@@ -212,4 +302,3 @@ function canvasMousePos(ele, event) {
         y: y - ele.offsetParent.offsetTop
     }
 };
-
