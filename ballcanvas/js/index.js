@@ -13,6 +13,7 @@ window.onload = function() {
         undoTool = document.getElementsByClassName("undo")[0],
         redoTool = document.getElementsByClassName("redo")[0],
         downTool = document.getElementsByClassName("down")[0],
+         bgi = document.getElementsByClassName("bgi")[0],
         w = document.getElementsByClassName("bgi")[0].width,
         h = document.getElementsByClassName("bgi")[0].height,
         elemList = [moveTool, ballTool, playerTool, lineTool, reactTool, textTool, curveTool, circleTool,downTool],
@@ -74,6 +75,8 @@ window.onload = function() {
                 ctx.putImageData(sta, 0, 0);
             }
         };
+        //ctx.drawImage(bgi, 0, 0, w, h);
+        downTool.onclick = downImg;
         // function drag(f1, f2, f3) {
         //     this.mousedown = false;
         //     this.addEvent('mousedown', f1(e));
@@ -126,7 +129,6 @@ window.onload = function() {
                 playerStack.push(pla);
                 var sta = ctx.getImageData(0, 0, w, h);
                 status.push(sta);
-
             };
         };
 
@@ -340,11 +342,12 @@ window.onload = function() {
         };
 
         function downImg() {
-            html2canvas(back, {
-                height: back.height() + 20,
+            html2canvas(document.body, {
+                height: h + 20,
                 onrendered: function(canvas) {
+
                     var url = canvas.toDataURL();
-                    var triggerDownload = $("<a>").attr("href", url).attr("download", getNowFormatDate() + "异常信息.png").appendTo("body");
+                    var triggerDownload = $("<a>").attr("href", url).attr("download", new Date() + ".png").appendTo("body");
                     triggerDownload[0].click();
                     triggerDownload.remove();
                 }
@@ -376,9 +379,9 @@ window.onload = function() {
                 case 'ball':
                     ball();
                     break;
-                case 'down':
-                    downImg();
-                    break;
+                // case 'down':
+                //     downImg();
+                //     break;
                 default:
                     break;
             };
