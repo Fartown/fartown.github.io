@@ -28,6 +28,8 @@ window.onload = function() {
         status = new statusStack;
     //初始化画布
     (function init() {
+        //绘制虚线
+        
         //左边工具栏功能控制
         function setShadow(ele) {
             for (var i = 0; i < elemList.length; i++) {

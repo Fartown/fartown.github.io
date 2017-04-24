@@ -37,6 +37,36 @@
         }
     };
 
+    //拓展canvas虚线
+    var context = document.getElementById('back').getContext('2d'),
+        moveToFunction = CanvasRenderingContext2D.prototype.moveTo;
+
+    CanvasRenderingContext2D.prototype.lastMoveToLocation = {};
+
+    CanvasRenderingContext2D.prototype.moveTo = function(x, y) {
+        moveToFunction.apply(context, [x, y]);
+        this.lastMoveToLocation.x = x;
+        this.lastMoveToLocation.y = y;
+    };
+
+    CanvasRenderingContext2D.prototype.dashedLineTo = function(x, y, dashLength) {
+        dashLength = dashLength === undefined ? 3 : dashLength;
+
+        var startX = this.lastMoveToLocation.x;
+        var startY = this.lastMoveToLocation.y;
+
+        var deltaX = x - startX;
+        var deltaY = y - startY;
+        var numDashes = Math.floor(Math.sqrt(deltaX * deltaX + deltaY * deltaY) / dashLength);
+
+        for (var i = 0; i < numDashes; ++i) {
+            this[i % 2 === 0 ? 'moveTo' : 'lineTo']
+                (startX + (deltaX / numDashes) * i, startY + (deltaY / numDashes) * i);
+        }
+
+        this.moveTo(x, y);
+    };
+
     //运动员对象
     var SoccerPlayer = function(context, centerX, centerY, radius, ring, color, text) {
         this.x = centerX;
@@ -156,7 +186,7 @@
             this.ctx.lineWidth = 1;
             this.ctx.beginPath();
             this.ctx.moveTo(this.start.x, this.start.y);
-            this.ctx.lineTo(this.end.x, this.end.y);
+            this.ctx.dashedLineTo(this.end.x, this.end.y);
             this.ctx.closePath();
             this.ctx.stroke();
             this.ctx.restore();
@@ -243,15 +273,15 @@
     drawBall.prototype = {
         ball: function() {
             this.ctx.save()
-            // ball.src = 'image/tool/ball-tool-icon.svg';
-            // ball.crossOrigin = "Anonymous";
-            // ball.onload = function() {
-            //     // ball.style.position = 'absolute';
-            //     // ball.style.top = _this.center.y;
-            //     // ball.style.left = _this.center.x;
-            //     // ball.style.display = 'block';
-            //     _this.ctx.drawImage(ball, _this.center.x, _this.center.y);
-            // };
+                // ball.src = 'image/tool/ball-tool-icon.svg';
+                // ball.crossOrigin = "Anonymous";
+                // ball.onload = function() {
+                //     // ball.style.position = 'absolute';
+                //     // ball.style.top = _this.center.y;
+                //     // ball.style.left = _this.center.x;
+                //     // ball.style.display = 'block';
+                //     _this.ctx.drawImage(ball, _this.center.x, _this.center.y);
+                // };
             this.ctx.beginPath();
             this.ctx.strokeStyle = this.strokeStyle;
             this.ctx.lineWidth = 1;
