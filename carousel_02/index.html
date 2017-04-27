@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>carousel</title>
+    <style>
+        /*<!--去除默认样式-->*/
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            border: none;
+            box-sizing: border-box;
+        }
+        .carousel_parent{
+            /*图片的宽度*/
+            width:100%;
+            /*图片的高度*/
+            height: 350px;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        #imgs{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+        #imgs li{
+            float: left;
+        }
+        #indexs{
+            position: absolute;
+            bottom: 30px;
+            right: 40px;
+            z-index: 20;
+        }
+        #indexs li{
+            width: 22px;
+            height: 22px;
+            line-height: 22px;
+            display: inline-block;
+            background: #3e3e3e;
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        #indexs li.hover,#indexs li:hover{
+            background-color: #E4393c;
+        }
+    </style>
+    <script src="js/carousel_baner.js"></script>
+</head>
+<body>
+    <div class="carousel_parent">
+        <ul id="imgs">
+            <p>哈哈</p>
+        </ul>
+        <ul id="indexs"></ul>
+    </div>
+</body>
+</html>

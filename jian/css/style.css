@@ -1,0 +1,356 @@
+/*index页样式*/
+.jianlogo{
+    position: absolute;
+    top: .26rem;
+    left: 3.2%;
+    width: 64px ;
+}
+.logo {
+    position: relative;
+    text-align: center;
+    width: 71.73%;
+    margin: .53rem auto 0;
+}
+.logo img {
+    width: 100%;
+    height: 2.79rem;
+}
+
+.content {
+    position: absolute;
+    top: .87rem;
+    width: 92%;
+}
+
+p.inc {
+    font-family: 'zhonghei';
+    font-size: 40px;
+    text-align: center;
+}
+
+p.title {
+    margin-top: .2rem;
+    font-family: 'xianhei';
+    text-align: center;
+    font-size: 24px;
+}
+
+.inc_intro {
+    font-family: 'xianhei';
+    margin-top: .795rem;
+    font-size: 30px;
+    padding-left: 3.2%;
+    line-height: .38rem;
+}
+
+.foot-button {
+    position:fixed;
+    height: 88px;
+    min-width: 25.2%;
+    text-align: center;
+    bottom:.795rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.foot-button input {
+    width: 100%;
+    border: 1px solid white;
+    background-color: #aa4343;
+    font-size: 28px;
+    padding: 10px 8px;
+    color: white;
+    border-radius: 10px;
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+}
+
+input.active {
+    filter: alpha(opacity=100) ;
+    -moz-opacity: 1 ;
+    opacity: 1 ;
+}
+
+
+/*info页样式*/
+
+.info-title {
+    margin-top: 1.094rem;
+    font-size: .3rem;
+    text-align: center;
+    position: relative;
+}
+
+.info-title p {
+    margin: 0 auto;
+    letter-spacing: .15em;
+}
+
+.info-title img {
+    position: absolute;
+    top: -.13rem;
+    height: .62rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#info-form {
+    margin-top: .81rem;
+    height: 4.16rem;
+}
+
+.info-form {
+    text-align: center;
+    height: 0.75rem;
+    font-size: 0.2rem;
+    /*      margin-bottom: 20px;*/
+}
+
+.info-form span {
+    font-size: 0.2rem;
+}
+
+.info-form input[value='notes'] {
+    height: 0.3rem;
+    margin-left: 5%;
+    position: relative;
+    top: 0.04rem;
+}
+
+.info-form input {
+    margin-left: 14.4%;
+    height: 0.49rem;
+    padding-left: 8px;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.info-form input[type='radio'] {
+    width: 13.2%;
+}
+
+span.sex {
+    position: relative;
+    top: -0.15rem;
+}
+
+input#submit {
+ /*   height: 0.6rem;
+    width: 40%;
+    border: 1px solid white;
+    background-color: #aa4343;
+    font-size: .3rem;
+    color: white;
+    border-radius: 10px;
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+    margin-left: 30%;*/
+}
+
+
+/*select页*/
+
+.select {
+    margin-top: 2.1rem;
+    width: 100%;
+    position: relative;
+}
+
+.polyline {
+    top: 0.37rem;
+    height: 7rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.select-item {
+    width: 47%;
+}
+
+.left-item {
+    position: absolute;
+    left: 3.33%;
+}
+
+.select div:nth-of-type(2) {
+    top: 1.424rem;
+}
+
+.select div:nth-of-type(3) {
+    top: 2.95rem;
+}
+
+.select div:nth-of-type(4) {
+    top: 4.558rem;
+}
+
+.select div:nth-of-type(5) {
+    top: 5.987rem;
+}
+
+.right-item {
+    position: absolute;
+    right: 3.33%;
+}
+
+.select-item img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.select-item .wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.select-item .wrap p {
+    font-size: 0.225rem;
+    letter-spacing: 2px;
+}
+
+.select-item .wrap p span {
+    font-size: 0.338rem;
+}
+
+.left-item .wrap p:nth-of-type(1) {
+    position: absolute;
+    width: 25.7%;
+}
+
+.left-item .wrap p:nth-of-type(2) {
+    position: absolute;
+    width: 68%;
+    right: 6%;
+}
+
+.right-item .wrap p:nth-of-type(1) {
+    position: absolute;
+    width: 25.7%;
+    right: 0;
+}
+
+.right-item .wrap p:nth-of-type(2) {
+    position: absolute;
+    width: 66%;
+    left: 10%;
+}
+
+
+/*test1页*/
+
+p.test-intro {
+    width: 100%;
+    padding: 6% 6.67% 0;
+    font-size: 0.225rem;
+}
+
+
+/*test2页*/
+
+.process {
+    width: 100%;
+    margin-bottom: 1.724rem;
+}
+
+.process img {
+    position: absolute;
+    top: 0;
+    height: 5px;
+}
+
+.process .bg {
+    width: 100%;
+}
+
+.process .pro {
+    width: 50%;
+}
+
+p.test-title {
+    padding: 0 8px 0;
+    font-size: 0.337rem;
+    font-family: FZZXHJW;
+}
+
+p.test-title span {
+    font-size: 0.675rem;
+    font-style: italic;
+}
+
+.test2-select {
+    text-align: center;
+    height: 0.75rem;
+    border: 1px solid gray;
+    width: 70%;
+    margin: 0 auto;
+    border-width: 0 0 1px 0;
+}
+
+.test-form input {
+    display: none;
+}
+
+.test-form label {
+    font-size: 0.26rem;
+    height: 0.74rem;
+    line-height: 0.74rem;
+    display: block;
+}
+
+.previous {
+    position: fixed;
+    font-size: 0.26rem;
+    position: absolute;
+    bottom: 0.2rem;
+    left: 2.5%;
+    width: 95%;
+}
+#percent{
+float: right;
+}
+
+/*press-result页*/
+
+p.appreciate {
+    margin-top: 0.7rem;
+    font-size: 0.26rem;
+    text-align: center;
+}
+
+.result {
+    width: 93%;
+    height: 3.6rem;
+    margin: 0.3rem auto 0;
+    background-image: url(../image/result-bg.png);
+    background-size: 100% 100%;
+}
+
+.result .result-title {
+    height: 0.9rem;
+    width: 90%;
+    border: 1px solid gray;
+    font-size: 0.30rem;
+    border-width: 0 0 1px 0;
+    margin: 0 auto;
+    padding-top: 0.3rem;
+}
+
+.result .result-detail {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 0.2rem;
+    padding-top: 5px;
+}
+
+
+/*end页*/
+
+.result .inc-message {
+    margin-top: 0.4rem;
+}

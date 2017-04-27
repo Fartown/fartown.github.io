@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="46px" height="48px" viewBox="0 0 46 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>Slice 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="line-tool-icon" sketch:type="MSLayerGroup" transform="translate(3.000000, 0.000000)">
+            <g id="Page-1" sketch:type="MSShapeGroup">
+                <g id="line-tool-icon">
+                    <g id="line-tool">
+                        <path d="M0.328813553,44.5116121 C0.328813553,44.5116121 1.39523112,32.0412403 14.4001211,22.0169636 C27.4050111,11.9926869 32.417697,12.4227282 32.417697,12.4227282" id="Line" stroke="#626262" stroke-width="5.5" stroke-linecap="round"></path>
+                        <path d="M32.5,3 L40,18 L25,18 L32.5,3 L32.5,3 Z" id="Triangle-1" fill="#626262" transform="translate(32.500000, 10.500000) rotate(58.000000) translate(-32.500000, -10.500000) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>简测</title>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="">
+    <meta name="apple-mobile-web-app-status-bar-style" content="" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+     <div class="info-title"><p>压力测试结果分析</p><img src="image/rect-press.png" alt=""></div>
+     <p class="appreciate">--- 感谢您参与本次测试 ---</p>
+<div class="result">
+<p class="result-title">您的压力过大.</p> 
+  <p class="result-detail">平时应该多注意</p>
+</div>
+    <div class="foot-button"><input type="button" value="进入下一测试" id="submit" type="submit"></div>
+    <p class="copyright">Powered by 简测</p>
+</body>
+<script>
+    var subButton = document.getElementById('submit');
+    subButton.onclick =function () {
+         changColor(subButton,'active');  
+         window.location.href = 'end.html';
+    };
+</script>
+</html>

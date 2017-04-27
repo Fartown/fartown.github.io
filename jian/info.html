@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>简测</title>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="">
+    <meta name="apple-mobile-web-app-status-bar-style" content="" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+    <div class="info-title"><p>填写基本信息</p><img src="image/title-rect.png" alt=""></div>
+    <form action="" id='info-form'>
+        <p class="info-form"><span>部门</span><input type="text"></p>
+        <p class="info-form"><span>姓名</span><input type="text"></p>
+        <p class="info-form"><span>性别</span><input type="radio" value="male" name="sex"><span class="sex">男</span> <input type="radio" value="female" name="sex"><span  class="sex">女</span></p>
+        <p class="info-form"><span>生日</span><input type="text"></p>
+        <p class="info-form"><span>电话</span><input type="text"></p>
+        <p  class="info-form"> <span class="notes">为保障准确性,我将诚实作答</span><input type="radio" value="notes"></p>
+    </form>
+    <div class="foot-button"><input type="button" value="提交" id="submit" type="submit"></div>
+    <p class="copyright">Powered by 简测</p>
+    <script>
+  var subButton = document.getElementById('submit');
+    subButton.onclick =function () {
+         changColor(subButton,'active'); 
+         window.location.href = 'select.html'; 
+    };
+    </script>
+</body>
+</html>
+

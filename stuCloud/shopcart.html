@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="">
+    <meta name="apple-mobile-web-app-status-bar-style" content="" />
+    <title>学习云</title>
+    <script src="js/zepto.js"></script>
+    <style>
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+        font-size: 16px;
+    }
+    
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    section {
+        height: 9.18rem;
+        width: 100%;
+        background-color: #f4f4f4;
+        padding-top: 5px;
+    }
+    
+    nav {
+        height: .82rem;
+    }
+    
+    .nav-tab {
+        height: .82rem;
+        width: 25%;
+        float: left;
+        -webkit-background-size: 50% 80%;
+        background-size: 50% 80%;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+    }
+    
+    .nav-tab:nth-of-type(1) {
+        background-image: url(images/tab_1.png);
+    }
+    
+    .nav-tab:nth-of-type(2) {
+        background-image: url(images/tab_2.png);
+    }
+    
+    .nav-tab:nth-of-type(3) {
+        background-image: url(images/tab_3.png);
+    }
+    
+    .nav-tab:nth-of-type(4) {
+        background-image: url(images/tab_4.png);
+    }
+    /*本页专用*/
+    
+    .shop {
+        width: 98%;
+        height: 1.33rem;
+        margin: 0 auto 5px;
+        background-color: #fff;
+        border-radius: 5px;
+        background-image: url(images/file.jpg);
+        background-position: 8% 50%;
+        background-repeat: no-repeat;
+        -webkit-background-size: 15%;
+        background-size: 15%;
+        position: relative;
+    }
+    
+    .select {
+        display: none;
+    }
+    
+    label {
+        width: 18px;
+        background-color: #64b5c8;
+        height: 18px;
+        display: inline-block;
+        border-radius: 100%;
+        overflow: hidden;
+        margin: 0.5rem 0 0 2%;
+    }
+    
+    .select:checked + label:before {
+        content: "\2713";
+        color: #f3f3f3;
+        font-size: 18px;
+        text-align: center;
+        line-height: 10px;
+        width: 18px;
+        height: 18px;
+        padding-left: 3px;
+    }
+    
+    .filename {
+        position: absolute;
+        top: .2rem;
+        left: 25%;
+        font-weight: 600;
+    }
+    .setvalue{
+        width: 40%;
+        position: absolute;
+        right: 2%;
+        top: .15rem;
+    }
+    .setvalue input{
+            display: inline-block;
+            width:50%;
+            border: 2px solid black;
+            outline: none;
+            border-radius: 10px;
+            height: .35rem;
+            text-align: center;
+            line-height: .3rem;
+    }
+    .circle{
+        background-color: #656565;
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        color: white;
+        line-height: 20px;
+        text-align: center;
+        font-size: 18px;
+        border-radius: 100%;
+        position: relative;
+        top: .05rem;
+    }
+    .thisvalue{
+        margin-left: 25%;
+    }
+    .thisvalue img{
+        width: 16px;
+        height: 16px;
+    }
+    .onsale{
+        font-size: .8em;
+        color: gray;
+    }
+    .detail{
+        position: absolute;
+        right: 10px;
+        bottom: 5px;
+
+    }
+    a{
+        text-decoration: none;
+                color: #5eaed3;
+    }
+    .address{
+        width: 100%;
+        position: fixed;
+        bottom:  .82rem;
+        background-color: #fff;
+        height: 1.36rem;
+    }
+    .ad-detail{
+        height: .6rem;
+        font-size: 1.1em;
+        padding-left: 5px;
+        line-height: .6rem;
+         padding-left: 16px;
+    }
+    .sum{
+        line-height: .86rem;
+        font-size: 1.5em;
+        line-height: .86rem;
+        color: #e6cf5f ;
+        padding-left: 16px;
+    }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div></div>
+        <div class="shop">
+            <input type="checkbox" id="selected" class="select">
+            <label for="selected"></label>
+            <div class="filename">线性代数福气
+            </div>
+            <p class="setvalue"><span class="circle">-</span>
+                    <input type="text" value="1">&nbsp;<span class="circle">+</span></p>
+            <p class="thisvalue">5.98 <img src="images/dou.png" alt="">
+                <s>&nbsp;7.98&nbsp;<img src="images/dou.png" alt=""></s><span class="onsale">&nbsp;享受优惠</span> </p>
+            <span class="detail"><a href="">资料详情></a></span>
+        </div>
+        <div class="address">
+            <div class="ad-detail">收货地址:华中科技大学韵苑6栋</div>
+            <div class="sum">总计：11.96 <img src="" alt="">+邮费：2</div>
+        </div>
+    </section>
+    <nav>
+        <div class="nav-tab"></div>
+        <div class="nav-tab"></div>
+        <div class="nav-tab"></div>
+        <div class="nav-tab"></div>
+    </nav>
+</body>
+<script>
+var h = window.innerHeight || document.body.clientHeight || document.documentElement.clientHeight;
+document.documentElement.style.fontSize = h / 10 + "px";
+</script>
+
+</html>

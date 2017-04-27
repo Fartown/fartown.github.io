@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta content="http://fussballtraining.com/ftg/">
+</head>
+
+<body>
+    <div class="wrap">
+        <aside>
+            <ul id="sidebar">
+                <li>
+                    <div class="move"><img src="image/tool/cursor-icon.svg" alt="move"></div>
+                </li>
+                <li>
+                    <div class="player"><img src="image/tool/player-tool-icon.svg" alt="line"></div>
+                </li>
+                <li>
+                    <div class="ball"><img src="image/tool/ball-tool-icon.svg" alt="line"></div>
+                </li>
+                <li>
+                    <div class="line"><img src="image/tool/line-tool-icon.svg" alt="line"></div>
+                </li>
+                <li>
+                    <div class="circle"><img src="image/tool/ellipse-tool-icon.svg" alt="circle"></div>
+                </li>
+                <li>
+                    <div class="react"><img src="image/tool/rect-tool-icon.svg" alt="react"></div>
+                </li>
+                <li>
+                    <div class="text"><img src="image/tool/text-tool-icon.svg" alt="text"></div>
+                </li>
+                <li>
+                    <div class="curve"><img src="image/tool/curved-line-tool-icon.svg" alt="curve"></div>
+                </li>
+                <li>
+                    <div class="undo"><img src="image/tool/undo.png" alt="undo"></div>
+                </li>
+                <li>
+                    <div class="redo"><img src="image/tool/redo.png" alt="redo"></div>
+                </li>
+                <li>
+                    <div class="down"><img src="image/tool/down-tool-icon.svg" alt="下载"></div>
+                </li>
+            </ul>
+        </aside>
+        <section>
+            <img src="image/bgi/vertical.png" alt="球场" class="bgi" >
+            <canvas id="back"></canvas>
+            <input type="text" placeholder="输入文字" id="inputText">
+        </section>
+    </div>
+</body>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://html2canvas.hertzen.com/build/html2canvas.js"></script>
+<script src="js/lib.js"></script>
+<script src="js/index.js"></script>
+<script>
+var eventUtil = {
+    bindFunction: function(fn, data) {
+        var handler = function() {
+            fn(data);
+        };
+        fn['closuer'] = handler;
+        return handler;
+    },
+    removeFunction: function(fn) {
+        return fn['closure'];
+    },
+    addEvent: function(ele, event, func, bool, data) {
+        if (ele.addEventListener) {
+            ele.addEventListener(event, this.bindFunction(func, data), bool);
+        } else {
+            ele.attachEvent('on' + event, this.bindFunction(func, data), bool);
+        }
+    },
+    removeEvent: function(ele, event, func, bool) {
+        if (ele.removeEventListener) {
+            ele.removeEventListener(event, func['closure'], bool);
+        } else {
+            ele.detachEvent('on' + event, this.removeFunction(func), bool);
+        }
+    }
+}
+var div = document.getElementById('sidebar');
+
+function fn(i) {
+    console.log(i);
+};
+eventUtil.addEvent(div, 'click', fn, false, div);
+eventUtil.removeEvent(div, 'click', fn, false);
+</script>
+
+</html>

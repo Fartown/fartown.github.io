@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="">
+    <meta name="apple-mobile-web-app-status-bar-style" content="" />
+    <title>学习云</title>
+    <script src="js/zepto.js"></script>
+    <style>
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+        font-size: 13px;
+    }
+    
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    section {
+        height: 9.18rem;
+        width: 100%;
+    }
+    
+    .content {
+        width: 100%;
+        height: 8.34rem;
+        background-color: #f4f4f4;
+    }
+    
+    .nav-bar {
+        width: 100%;
+        height: .78rem;
+        font-size: 18px;
+    }
+    
+    .bar-left,
+    .bar-right {
+        float: left;
+        height: 100%;
+        width: 50%;
+        line-height: .78rem;
+        text-align: center;
+        color: #3fa6c9;
+    }
+    
+    nav {
+        position: fixed;
+        height: .82rem;
+        width: 100%;
+    }
+    
+    .nav-tab {
+        height: .82rem;
+        width: 25%;
+        float: left;
+        -webkit-background-size: 40%;
+        background-size: 40%;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+    }
+    
+    .nav-tab:nth-of-type(1) {
+        background-image: url(images/tab_1.png);
+    }
+    
+    .nav-tab:nth-of-type(2) {
+        background-image: url(images/tab_2.png);
+    }
+    
+    .nav-tab:nth-of-type(3) {
+        background-image: url(images/tab_3.png);
+    }
+    
+    .nav-tab:nth-of-type(4) {
+        background-image: url(images/tab_4.png);
+    }
+    /*本页自定义样式*/
+    
+    .search {
+        height: 1.62rem;
+        width: 100%;
+    }
+    
+    .select {
+        padding-left: 10px;
+        height: .7rem;
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .select {
+        letter-spacing: 2px;
+        font-size: 13px;
+        line-height: .7rem;
+    }
+    
+    .select span:nth-of-type(1) {
+        font-size: 15px;
+        font-weight: bold;
+    }
+    
+    .select span:nth-of-type(2) {
+        font-size: 13px;
+    }
+    
+    #select {
+        width: 25%;
+        display: inline-block;
+        background-color: #51b0d0;
+        height: .35rem;
+        color: white;
+        position: relative;
+        line-height: .35rem;
+        border-radius: 8px;
+        text-align: center;
+    }
+    
+    .search form {
+        height: .45rem;
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .search input {
+        border-width: 0;
+        outline: none;
+        width: 100%;
+        height: .45rem;
+        border-radius: 10px;
+        border: 1.5px #3fa6c9 solid;
+        font-size: 13px;
+        padding-left: 25px;
+        margin: 0 auto;
+    }
+    
+    .sort {
+        width: 100%;
+        height: .48rem;
+        padding-left: 15%;
+        line-height: .48rem;
+        position: relative;
+    }
+    
+    .sort img {
+        position: absolute;
+        left: 5%;
+        height: .48rem;
+    }
+    
+    .str-item {
+        width: 97%;
+        position: relative;
+        background-color: #fff;
+        margin: 0 auto;
+        border-radius: 5px;
+        min-height: 1.6rem;
+    }
+    
+    .pin {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        width: 18px;
+        font-size: 13px;
+        background-color: #de2a13;
+        color: white;
+        text-align: center;
+    }
+    
+    .item {
+        padding-top: .12rem;
+        width: 100%;
+        height: .92rem;
+    }
+    
+    .avatar {
+        margin-left: 2%;
+        width: .8rem;
+        height: .8rem;
+        border-radius: 100%;
+        overflow: hidden;
+        float: left;
+    }
+    
+    .avatar img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .item-title {
+        padding-left: 20%;
+    }
+    
+    .nickname {
+        font-size: 11px;
+        color: gray;
+    }
+    
+    .title {
+        letter-spacing: 2px;
+        font-size: 13px;
+        color: #de2a13;
+    }
+    
+    .data {
+        font-size: 11px;
+        color: #de2a13;
+    }
+    
+    .stick {
+        color: black;
+    }
+    
+    .cont {
+        text-align: left;
+        width: 80%;
+        min-height: 20px;
+        margin: 10px 0 0 20%;
+    }
+    
+    .con {
+        font-size: 13px;
+        padding: 0 5px 2px 0;
+    }
+    
+    .date {
+        text-align: right;
+        padding-bottom: 3px;
+        padding-right: 5px;
+        font-size: 10px;
+        color: gray;
+    }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="nav-bar">
+            <div class="bar-left">学习资料</div>
+            <div class="bar-right">校内攻略</div>
+        </div>
+        <div class="content">
+            <div class="search">
+                <div class="select">
+                    <span>学校:</span>
+                    <span>华中科技大学</span>
+                    <span id="select">切换</span>
+                </div>
+                <form action="">
+                    <input type="search" placeholder="搜索百科内容">
+                </form>
+                <div class="sort">
+                    <img src="images/sort.png" alt=""> 按赞数排序
+                </div>
+            </div>
+            <div class="str-item">
+                <span class="pin">顶</span>
+                <div class="item">
+                    <div class="avatar"><img src="images/avatar.jpg" alt=""></div>
+                    <div class="item-title">
+                        <p class="nickname">坏下课</p>
+                        <p class="title stick">留言<span>&nbsp;|&nbsp;</span>哈哈哈哈哈哈和全球</p>
+                        <p class="data stick"><span>20000次查看</span><img src="" alt="">200次</p>
+                    </div>
+                </div>
+                <div class="cont">
+                    <p class="con">一些乱七八糟一些乱七八糟一些乱七八糟一些乱七八糟一些乱七八糟一些乱七八糟一些乱七八糟一些乱七八糟一些乱七八糟</p>
+                    <p class="date">2016年12月12日</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <nav>
+        <div class="nav-tab"></div>
+        <div class="nav-tab"></div>
+        <div class="nav-tab"></div>
+        <div class="nav-tab"></div>
+    </nav>
+</body>
+<script>
+var h = window.innerHeight || document.body.clientHeight || document.documentElement.clientHeight;
+document.documentElement.style.fontSize = h / 10 + "px";
+</script>
+
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "stucloud",
+  "version": "0.0.1",
+  "description": "学习云移动端页面",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "lt --port 3000",
+    "start": "gulp serve"
+  },
+  "author": "zc",
+  "license": "ISC"
+}
